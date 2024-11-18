@@ -4,7 +4,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 # Load recommendation data
-df_result = pd.read_csv(r'C:\Users\nishd\OneDrive\Documents\bda\movie_rec\server\MovieRecommendations.csv')
+df_result = pd.read_csv('datasets/MovieRecommendations.csv')
 
 @app.route('/recommend', methods=['POST'])
 def recommend():
